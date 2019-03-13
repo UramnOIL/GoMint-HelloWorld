@@ -1,0 +1,2 @@
+# GoMint-HelloWorld
+kotlinでGomintなHelloWorld
