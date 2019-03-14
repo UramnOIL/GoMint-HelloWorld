@@ -35,7 +35,7 @@ class HelloWorldPlugin: Plugin(), EventListener {
         async {
             return@async helloWorld.getHelloWorld()
         }.await().let {
-            event.player.sendMessage(it)
+            event.player.sendMessage(it)    //Hello, World!
         }
     }
 }
