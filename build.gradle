@@ -11,6 +11,7 @@ buildscript {
 
 plugins {
     id 'java'
+    id 'com.github.johnrengelman.shadow' version '4.0.1'
 }
 
 group 'com.uramnoil.gomint.helloworld'
@@ -35,4 +36,10 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.13.1'
     implementation 'com.eclipsesource.minimal-json:minimal-json:0.9.5'
     testImplementation "junit:junit:4.12"
+}
+
+defaultTasks = ["shadowJar"]
+
+shadowJar {
+    baseName = project.name
 }
