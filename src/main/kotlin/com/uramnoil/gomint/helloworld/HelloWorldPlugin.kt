@@ -13,10 +13,6 @@ import kotlinx.coroutines.launch
 @Version(major = 1, minor = 0)      //バージョン
 @Startup(StartupPriority.LOAD)      //ロードのタイミング
 class HelloWorldPlugin: Plugin(), EventListener {
-    companion object {
-        const val WH_URL_BASE   = "http://weather.livedoor.com/forecast/webservice/json/v1?city=140010"
-        const val WH_URL_PARAMS = "city=14410"
-    }
 
     private val helloWorld = HelloWorld()
 
