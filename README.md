@@ -1,2 +1,12 @@
 # GoMint-HelloWorld
-kotlinでGomintなHelloWorld
+
+KotlinでGoMintなHelloWorld
+
+## 注意
+
+環境を整えることができなかったので、私はそれをテストしませんでした。確認されていません。
+
+## 予定
+
+プラグインを作成するためによく使われる関数を実装します。
+私はConfigをよく理解していなかったので、それは遅れるでしょう。ごめんなさい。
