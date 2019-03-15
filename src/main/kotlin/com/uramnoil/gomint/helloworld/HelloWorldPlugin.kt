@@ -1,5 +1,6 @@
 package com.uramnoil.gomint.helloworld
 
+import com.uramnoil.gomint.helloworld.command.HelloWorldCommand
 import io.gomint.config.InvalidConfigurationException
 import io.gomint.event.EventHandler
 import io.gomint.event.EventListener
@@ -12,7 +13,7 @@ import kotlinx.coroutines.launch
 @PluginName("HelloWorld")    //プラグインの名前
 @Version(major = 1, minor = 0)      //バージョン
 @Startup(StartupPriority.LOAD)      //ロードのタイミング
-class HelloWorldPlugin: Plugin(), EventListener {
+class HelloWorldPlugin : Plugin(), EventListener {
 
     private val helloWorld = HelloWorld()
 
@@ -23,6 +24,7 @@ class HelloWorldPlugin: Plugin(), EventListener {
      */
     override fun onInstall() {
         logger.info( "たぶんonEnable" )
+        registerCommand(HelloWorldCommand())
         pluginManager.registerListener(this, this)  //イベントリスナの登録
     }
 
